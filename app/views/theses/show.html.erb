@@ -15,5 +15,10 @@
   <%= @thesis.defended %>
 </p>
 
+<p>
+  <strong>Author:</strong>
+  <%= @thesis.person.lastname %> <%= @thesis.person.firstname %>
+</p>
+
 <%= link_to 'Edit', edit_thesis_path(@thesis) %> |
 <%= link_to 'Back', theses_path %>

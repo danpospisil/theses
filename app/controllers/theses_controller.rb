@@ -15,6 +15,7 @@ class ThesesController < ApplicationController
   # GET /theses/new
   def new
     @thesis = Thesis.new
+   # @people = People.all
   end
 
   # GET /theses/1/edit
@@ -69,6 +70,6 @@ class ThesesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def thesis_params
-      params.require(:thesis).permit(:title, :abstract, :defended)
+      params.require(:thesis).permit(:title, :abstract, :defended, :person_id)
     end
 end

@@ -8,6 +8,7 @@
       <th>Title</th>
       <th>Abstract</th>
       <th>Defended</th>
+      <th>Author</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= thesis.title %></td>
         <td><%= thesis.abstract %></td>
         <td><%= thesis.defended %></td>
+        <td><%= thesis.person.lastname %> <%= thesis.person.firstname %></td>
         <td><%= link_to 'Show', thesis %></td>
         <td><%= link_to 'Edit', edit_thesis_path(thesis) %></td>
         <td><%= link_to 'Destroy', thesis, method: :delete, data: { confirm: 'Are you sure?' } %></td>

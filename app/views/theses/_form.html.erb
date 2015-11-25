@@ -23,6 +23,10 @@
     <%= f.label :defended %><br>
     <%= f.date_select :defended %>
   </div>
+  <div class="field">
+    <%= f.label :Author %><br>
+    <%= f.collection_select :person_id, Person.order(:lastname), :id, :author_name, include_blank: true %>
+   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
