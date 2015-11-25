@@ -16,6 +16,11 @@
 </p>
 
 <p>
+  <strong>Faculty:</strong>
+  <%= @thesis.faculty.try!(:name) %>
+</p>
+
+<p>
   <strong>Author:</strong>
   <%= @thesis.person.lastname %> <%= @thesis.person.firstname %>
 </p>

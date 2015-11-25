@@ -24,6 +24,10 @@
     <%= f.date_select :defended %>
   </div>
   <div class="field">
+    <%= f.label :faculty %><br>
+    <%= f.select :faculty_id, Faculty.all.collect { |f| [f.name, f.id] }, include_blank: true %>
+ </div>
+  <div class="field">
     <%= f.label :Author %><br>
     <%= f.collection_select :person_id, Person.order(:lastname), :id, :author_name, include_blank: true %>
    </div>
