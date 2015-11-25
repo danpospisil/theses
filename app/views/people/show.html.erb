@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User Name:</strong>
+  <%= @person.username %>
+</p>
+
+<p>
+  <strong>First Name:</strong>
+  <%= @person.firstname %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @person.lastname %>
+</p>
+
+<p>
+  <strong>Theses by this author:</strong>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Abstract</th>
+      <th>Defended</th>
+      <th>Author</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @theses.each do |thesis| %>
+      <tr>
+        <td><%= thesis.title %></td>
+        <td><%= thesis.abstract %></td>
+        <td><%= thesis.defended %></td>
+        <td><%= thesis.person.lastname %> <%= thesis.person.firstname %></td>
+        <td><%= link_to 'Show', thesis %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
